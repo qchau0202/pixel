@@ -6,8 +6,9 @@ import {
 import ProgressProvider from "./ProgressProvider";
 
 const PomodoroClock = () => {
-  const initialMinute = 10;
+  const initialMinute = 20;
   const initialSeconds = 0;
+  const [isPaused, setIsPaused] = useState(true);
   const [progress, setProgress] = useState(100);
 
   const [minutes, setMinutes] = useState(initialMinute);
@@ -15,15 +16,21 @@ const PomodoroClock = () => {
 
   useEffect(() => {
     const myInterval = setInterval(() => {
+      if (isPaused) {
+        return;
+      }
       if (seconds > 0) {
         setSeconds(seconds - 1);
-        // setProgress(Math.round(((((minutes * 60)  - 1) / (initialMinute * 60)) * 100)));
+        setProgress(
+          Math.round(
+            ((minutes * 60 + seconds - 1) / (initialMinute * 60)) * 100
+          )
+        );
       }
       if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(myInterval);
-        }
-        else {
+        } else {
           setMinutes(minutes - 1);
           setSeconds(59);
         }
@@ -37,17 +44,10 @@ const PomodoroClock = () => {
   return (
     <div>
       {minutes === 0 && seconds === 0 ? null : (
-        // : <h1> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</h1>
         <>
           <div className="center">
             <div className="clock-holder center">
               <div className="clock">
-                {/* <CircularProgressbarWithChildren value={progress}>
-            <div className="time">
-              <p>25:00</p>
-            </div>
-          </CircularProgressbarWithChildren> */}
-
                 <ProgressProvider valueStart={100} valueEnd={progress}>
                   {() => (
                     <CircularProgressbarWithChildren value={progress}>
@@ -63,9 +63,15 @@ const PomodoroClock = () => {
               </div>
 
               <div className="play-btn center">
-                <button>
-                  <img src="play-button-svgrepo-com.svg" />
-                </button>
+                {isPaused ? (
+                  <button onClick={() => setIsPaused(false)}>
+                    <img src="play-button-svgrepo-com.svg" />
+                  </button>
+                ) : (
+                  <button onClick={() => setIsPaused(true)} className="pause">
+                    <img src="./pause.png" alt="" />
+                  </button>
+                )}
               </div>
             </div>
           </div>

@@ -147,4 +147,8 @@ header {
   font-size: 40px;
   color: white;
 }
+.pause {
+  background-color: white;
+  border-radius: 50%;
+}
 /* Pomodoro */
