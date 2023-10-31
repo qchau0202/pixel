@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import WelcomePage from "./pages/WelcomePage"
+import Pomodoro from "./pages/Pomodoro"
+import OneHour from "./pages/OneHour"
+import CustomTimer from "./pages/CustomTimer"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+          <NavBar/>
+          <Routes>
+            <Route path="/" element={<WelcomePage/>} />
+            <Route path="/pomodoro" element={<Pomodoro/>} />
+            <Route path="/onehour" element={<OneHour/>} />
+            <Route path = "/custom" element={<CustomTimer/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

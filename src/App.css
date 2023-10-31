@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Pixelify+Sans&family=Roboto:wght@100&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(240, 144, 65);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Css center class */
+.center {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/* Css center class */
+.narrow {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  padding-left: 10px;
+}
+/* Css Font */
+
+
+/* Css Font */
+
+/* Navigation Bar */
+header {
+  width: 100%;
+}
+.top {
+  width: 45%;
+  border: 5px solid #6C5F5B ;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #6C5F5B;
+}
+.logo {
+  font-size: 25px;
+  font-family: 'Pixelify Sans';
+  margin: 0px 20px 0px 0px;
+}
+.logo img {
+  height: 5rem;
+  width: 5rem;
+  background-color: #F6F1EE;
+  border-radius: 50%;
+}
+.logo p{
+  margin: 25px 10px;
+  color:#F6F1EE;
+}
+.navBar{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 80%;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 10px;
+}
+.navBar li{
+  background-color: #F6F1EE;
+}
+.navBar li:hover{
+  background-color: #ffffffc0;
+  color: black;
+}
+/* Navigation Bar */
+
+/* Footer */
+.footer {
+  height: 50vh;
+  background-color: white;
+  margin-top: 50vh;
+}
+/* Footer */
+/* Welcome page */
+.content{
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  margin-top: 100px;
+}
+.content h1 {
+  font-size: 80px;
+  font-family: 'Lilita One', sans-serif;
+  color: white;
+  width: 100%;
+  transition-duration: 0.5s;
+}
+.content h1:hover{
+  background-color: #6C5F5B;
+  border: #6C5F5B;
+  border-radius: 10px;
+  content: '';
+  width: 50%;
+  transition-duration: 1s;
+}
+.content p{
+  font-size: 30px;
+  color: #6C5F5B;
+  font-family: 'Inclusive Sans', sans-serif;
+  margin-top: 10px;
+  width: 100%;
+}
+/* Pomodoro */
+.CircularProgressbar-path {
+  stroke: #EBBA16;
+}
+
+.CircularProgressbar-trail {
+  stroke: grey;
+}
+
+/* .CircularProgressbar-text {
+  fill: white;
+} */
+
+.CircularProgressbar-background {
+  fill: green;
+}
+.clock-holder{
+  flex-wrap: wrap;
+  background-color: #6C5F5B;
+  width: 25%;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  border: 1px;
+  border-radius: 25px
+}
+.clock {
+  width: 15rem;
+  height: 15rem;
+  margin-top: 90px;
+}
+.play-btn {
+  width: 100%;
+  margin-top: 50px;
+}
+.play-btn button {
+  width: 3rem;
+  height: 3rem;
+}
+.time {
+  font-family: 'Lilita One', sans-serif;
+  font-size: 40px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Pomodoro */
