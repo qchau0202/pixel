@@ -3,7 +3,7 @@ import PomodoroClock from '../components/PomodoroClock'
 
 const Pomodoro = () => {
   return (
-    <div><PomodoroClock /></div>
+    <div><PomodoroClock/></div>
   )
 }
 

@@ -5,14 +5,15 @@ import {
 } from "react-circular-progressbar";
 import ProgressProvider from "./ProgressProvider";
 
-const PomodoroClock = () => {
+const OneHourClock = () => {
 
-  const resetBtn = () => {
-    setMinutes(1);
+    const resetBtn = () => {
+    setMinutes(60);
     setSeconds(0);
     setProgress(100);
   }
-  const initialMinute = 1;
+
+  const initialMinute = 60;
   const initialSeconds = 0;
   const [isPaused, setIsPaused] = useState(true);
   const [progress, setProgress] = useState(100);
@@ -35,8 +36,7 @@ const PomodoroClock = () => {
       }
       if (seconds === 0) {
         if (minutes === 0) {
-          // clearInterval(myInterval);
-          setMinutes(0)
+          clearInterval(myInterval);
         } else {
           setMinutes(minutes - 1);
           setSeconds(59);
@@ -91,4 +91,4 @@ const PomodoroClock = () => {
   );
 };
 
-export default PomodoroClock;
+export default OneHourClock;

@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Pixelify+Sans&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Pixelify+Sans&family=Roboto:wght@100&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: rgb(240, 144, 65);
 }
+/* Holder */
+
+/* Holder */
+
 /* Css center class */
 .center {
   display: flex;
@@ -14,13 +18,12 @@ body{
 }
 /* Css center class */
 .narrow {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 20px;
   margin: 10px;
   padding-left: 10px;
 }
 /* Css Font */
-
 
 /* Css Font */
 
@@ -30,28 +33,28 @@ header {
 }
 .top {
   width: 45%;
-  border: 5px solid #6C5F5B ;
+  border: 5px solid #6c5f5b;
   border-radius: 10px;
   margin-top: 10px;
   padding: 15px;
-  background-color: #6C5F5B;
+  background-color: #6c5f5b;
 }
 .logo {
   font-size: 25px;
-  font-family: 'Pixelify Sans';
-  margin: 0px 20px 0px 0px;
+  font-family: "Pixelify Sans";
+  margin: 0px 20px 0px 20px;
 }
 .logo img {
   height: 5rem;
   width: 5rem;
-  background-color: #F6F1EE;
+  background-color: #f6f1ee;
   border-radius: 50%;
 }
-.logo p{
+.logo p {
   margin: 25px 10px;
-  color:#F6F1EE;
+  color: #f6f1ee;
 }
-.navBar{
+.navBar {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
@@ -60,10 +63,10 @@ header {
   border-radius: 15px;
   padding: 10px;
 }
-.navBar li{
-  background-color: #F6F1EE;
+.navBar li {
+  background-color: #f6f1ee;
 }
-.navBar li:hover{
+.navBar li:hover {
   background-color: #ffffffc0;
   color: black;
 }
@@ -77,36 +80,36 @@ header {
 }
 /* Footer */
 /* Welcome page */
-.content{
+.content {
   flex-wrap: wrap;
   /* border: 1px solid black; */
   margin-top: 100px;
 }
 .content h1 {
   font-size: 80px;
-  font-family: 'Lilita One', sans-serif;
+  font-family: "Lilita One", sans-serif;
   color: white;
   width: 100%;
   transition-duration: 0.5s;
 }
-.content h1:hover{
-  background-color: #6C5F5B;
-  border: #6C5F5B;
+.content h1:hover {
+  background-color: #6c5f5b;
+  border: #6c5f5b;
   border-radius: 10px;
-  content: '';
+  content: "";
   width: 50%;
   transition-duration: 1s;
 }
-.content p{
+.content p {
   font-size: 30px;
-  color: #6C5F5B;
-  font-family: 'Inclusive Sans', sans-serif;
+  color: #6c5f5b;
+  font-family: "Inclusive Sans", sans-serif;
   margin-top: 10px;
   width: 100%;
 }
-/* Pomodoro */
+/* Clock */
 .CircularProgressbar-path {
-  stroke: #EBBA16;
+  stroke: #ebba16;
 }
 
 .CircularProgressbar-trail {
@@ -120,14 +123,15 @@ header {
 .CircularProgressbar-background {
   fill: green;
 }
-.clock-holder{
+.clock-holder {
   flex-wrap: wrap;
-  background-color: #6C5F5B;
+  background-color: #6c5f5b;
+  height: 550px;
   width: 25%;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   margin-top: 50px;
   border: 1px;
-  border-radius: 25px
+  border-radius: 25px;
 }
 .clock {
   width: 15rem;
@@ -137,18 +141,52 @@ header {
 .play-btn {
   width: 100%;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 .play-btn button {
   width: 3rem;
   height: 3rem;
+  margin-bottom: 30px;
 }
 .time {
-  font-family: 'Lilita One', sans-serif;
+  font-family: "Lilita One", sans-serif;
   font-size: 40px;
   color: white;
 }
-.pause {
-  background-color: white;
-  border-radius: 50%;
+.reset {
+  font-size: 20px;
+  background-color: #ebba16;  
+  border: 1px solid #ebba16 ;
+  border-radius: 50%; 
+  margin-left: 50px;
 }
-/* Pomodoro */
+.reset img {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-left: 5px;
+}
+/* Clock*/
+
+/* Custom Clock */
+.switch button {
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0px 10px 0px 0px;
+  width: 2rem;
+  height: 2rem;
+}
+.switch img {
+  width: 2rem;
+  height: 2rem;
+}
+.switch {
+  /* border: 1px solid black; */
+  margin: 10px;
+  justify-content: space-evenly;
+}
+.switch p{
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white;
+}
+/* Custom Clock */
+
