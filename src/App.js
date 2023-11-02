@@ -5,17 +5,19 @@ import WelcomePage from "./pages/WelcomePage"
 import Pomodoro from "./pages/Pomodoro"
 import OneHour from "./pages/OneHour"
 import CustomTimer from "./pages/CustomTimer"
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
       <BrowserRouter>
-          <NavBar/>
+        <NavBar />
           <Routes>
             <Route path="/" element={<WelcomePage/>} />
             <Route path="/pomodoro" element={<Pomodoro/>} />
             <Route path="/onehour" element={<OneHour/>} />
-            <Route path = "/custom" element={<CustomTimer/>} />
+          <Route path="/custom" element={<CustomTimer />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

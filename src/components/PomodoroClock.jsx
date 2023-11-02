@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {
-  CircularProgressbar,
   CircularProgressbarWithChildren,
 } from "react-circular-progressbar";
 import ProgressProvider from "./ProgressProvider";
 
 const PomodoroClock = () => {
-
   const resetBtn = () => {
-    setMinutes(1);
+    setMinutes(25);
     setSeconds(0);
     setProgress(100);
   }
-  const initialMinute = 1;
+  const initialMinute = 25;
   const initialSeconds = 0;
   const [isPaused, setIsPaused] = useState(true);
   const [progress, setProgress] = useState(100);
